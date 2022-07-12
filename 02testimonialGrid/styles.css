@@ -1,0 +1,19 @@
+html {
+  font-size: 62.5%;
+}
+
+nav a:link,
+nav a:visited {
+  text-decoration: none;
+  color: var(--very-dark-blue)
+}
+
+nav {
+  text-align: center;
+  margin: 2rem 0 5rem 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+}

@@ -1,0 +1,35 @@
+@media screen and (max-width: 40rem) {
+
+  body {
+    height: 100%;
+  }
+
+  main {
+    margin: 2.5rem 0;
+  }
+
+  .card {
+    width: 35rem;
+    flex-direction: column;
+  }
+
+  .card-img {
+    height: 30rem;
+    width: 100%;
+    background: url(../images/image-product-mobile.jpg) center / cover no-repeat;
+  }
+
+  .card-product {
+    padding: 2.1rem;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .product-price {
+    margin-top: 2rem;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
