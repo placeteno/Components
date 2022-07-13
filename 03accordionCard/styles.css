@@ -1,0 +1,133 @@
+:root {
+  /* Primary colors text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+
+  /* Background gradient: */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+
+  /* Neutral */
+
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =================
+    NAVIGATION
+  ================== */
+
+nav a:link,
+nav a:visited {
+  text-decoration: none;
+  color: var(--very-dark-blue)
+}
+
+nav {
+  text-align: center;
+  margin: 2rem 0 5rem 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+/* =================
+    ACCORDION CARD
+  ================== */
+
+.container {
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
+  max-width: 80rem;
+  display: flex;
+  border-radius: 2rem;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  z-index: 200;
+  top: 20rem;
+  left: -5rem;
+  background-image: url(./images/illustration-box-desktop.svg);
+  background-size: cover;
+  height: 25%;
+  width: 10%;
+}
+
+.illustration {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  flex-basis: 100%;
+}
+
+
+.illustration img {
+  height: 80%;
+  margin-left: -8rem;
+}
+
+.illustration::after {
+  content: '';
+  position: absolute;
+  top: -24rem;
+  left: -45rem;
+  z-index: 0;
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-size: cover;
+  height: 70rem;
+  width: 80rem;
+}
+
+.questions {
+  padding: 5rem;
+}
+
+.questions__heading {}
+
+.questions__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.questions__item {}
+
+.question {}
+
+.questions__text {}
+
+footer {
+  margin: 3rem 0;
+}
