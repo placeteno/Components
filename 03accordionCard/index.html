@@ -18,15 +18,7 @@
     <title>Frontend Mentor | FAQ Accordion Card</title>
     <link rel="stylesheet" href="../03accordionCard/styles.css" />
     <link rel="stylesheet" href="../03accordionCard/queries.css" />
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <script src="./scripts.js" defer></script>
   </head>
   <body>
     <header>
@@ -48,40 +40,62 @@
           <h1 class="questions__heading">FAQ</h1>
           <ul class="questions__items">
             <li class="questions__item">
-              <p class="question">How many team members can I invite?</p>
+              <p class="question">
+                How many team members can I invite?
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </p>
               <p class="questions__text">
                 You can invite up to 2 additional users on the Free plan. There
                 is no limit on team members for the Premium plan.
               </p>
             </li>
+            <hr />
             <li class="questions__item">
-              <p class="question">What is the maximum file upload size?</p>
+              <p class="question">
+                What is the maximum file upload size?
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </p>
               <p class="questions__text">
                 No more than 2GB. All files in your account must fit your
                 allotted storage space.
               </p>
             </li>
+            <hr />
             <li class="questions__item">
-              <p class="question">How do I reset my password?</p>
+              <p class="question">
+                How do I reset my password?
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </p>
               <p class="questions__text">
                 Click “Forgot password” from the login page or “Change password”
                 from your profile page. A reset link will be emailed to you.
               </p>
             </li>
+            <hr />
+
             <li class="questions__item">
-              <p class="question">Can I cancel my subscription?</p>
+              <p class="question">
+                Can I cancel my subscription?
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </p>
               <p class="questions__text">
                 Yes! Send us a message and we’ll process your request no
                 questions asked.
               </p>
             </li>
+            <hr />
+
             <li class="questions__item">
-              <p class="question">Do you provide additional support?</p>
+              <p class="question">
+                Do you provide additional support?
+                <ion-icon name="chevron-up-outline"></ion-icon>
+              </p>
               <p class="questions__text">
                 Chat and email support is available 24/7. Phone lines are open
                 during normal business hours.
               </p>
             </li>
+            <hr />
           </ul>
         </div>
       </div>
@@ -99,5 +113,13 @@
         >.
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

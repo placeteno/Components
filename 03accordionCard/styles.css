@@ -38,6 +38,10 @@ ul {
   list-style: none;
 }
 
+hr {
+  border: 1px solid var(--light-grayish-blue);
+}
+
 /* =================
     NAVIGATION
   ================== */
@@ -67,21 +71,23 @@ nav ul {
   background-color: white;
   margin: 0 auto;
   max-width: 80rem;
-  display: flex;
   border-radius: 2rem;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  gap: 3rem;
 }
 
 .container::before {
   content: '';
   position: absolute;
   z-index: 200;
-  top: 20rem;
-  left: -5rem;
+  top: 19rem;
+  left: -6rem;
   background-image: url(./images/illustration-box-desktop.svg);
   background-size: cover;
-  height: 25%;
-  width: 10%;
+  height: 18%;
+  width: 15%;
 }
 
 .illustration {
@@ -89,20 +95,21 @@ nav ul {
   display: flex;
   align-items: center;
   overflow: hidden;
-  flex-basis: 100%;
+  width: 50%;
+
 }
 
-
 .illustration img {
-  height: 80%;
+  z-index: 1;
+  height: 70%;
   margin-left: -8rem;
 }
 
 .illustration::after {
   content: '';
   position: absolute;
-  top: -24rem;
-  left: -45rem;
+  top: -25rem;
+  left: -49rem;
   z-index: 0;
   background-image: url(./images/bg-pattern-desktop.svg);
   background-size: cover;
@@ -111,23 +118,72 @@ nav ul {
 }
 
 .questions {
-  padding: 5rem;
+  padding: 5rem 5rem 5rem 0;
+  width: 50%;
 }
 
-.questions__heading {}
+.questions__heading {
+  font-size: 2.5rem;
+  color: var(--very-dark-desaturated-blue);
+  margin-bottom: 2.5rem;
+}
 
 .questions__items {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-right: 2rem;
 }
 
-.questions__item {}
+.questions__item {
+  font-size: 1.2rem;
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+}
 
-.question {}
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.questions__text {}
+.question-open {
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+
+ion-icon {
+  color: var(--soft-red);
+  transition: all .2s;
+}
+
+.questions__text {
+  margin-top: 1rem;
+  line-height: 1.4;
+  transform: translateY(-100%);
+  display: none;
+  transition: .2s;
+
+}
+
+.open {
+  display: block;
+  transform: translateY(0);
+}
+
+.closed {
+  display: none;
+}
 
 footer {
   margin: 3rem 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
