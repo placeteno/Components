@@ -54,7 +54,7 @@ nav a:visited {
 
 nav {
   text-align: center;
-  margin: 2rem 0 5rem 0;
+  padding: 2rem 0 5rem 0;
   font-size: 1.5rem;
 }
 
@@ -71,6 +71,7 @@ nav ul {
   background-color: white;
   margin: 0 auto;
   max-width: 80rem;
+  height: 427px;
   border-radius: 2rem;
   box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
 
@@ -96,7 +97,6 @@ nav ul {
   align-items: center;
   overflow: hidden;
   width: 50%;
-
 }
 
 .illustration img {
@@ -120,18 +120,21 @@ nav ul {
 .questions {
   padding: 5rem 5rem 5rem 0;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  overflow: scroll;
 }
 
 .questions__heading {
   font-size: 2.5rem;
   color: var(--very-dark-desaturated-blue);
-  margin-bottom: 2.5rem;
 }
 
 .questions__items {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   padding-right: 2rem;
 }
 
@@ -145,6 +148,11 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: all .2s;
+}
+
+.question:hover {
+  color: var(--soft-red);
 }
 
 .question-open {
@@ -186,4 +194,91 @@ footer {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    display: grid;
+    place-content: center;
+  }
+
+  .container {
+    margin: 0 1rem;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  nav {
+    padding-left: 2rem;
+    text-align: left;
+  }
+
+  .container {
+    margin: 5rem 2rem 0 2rem;
+    flex-direction: column;
+    gap: 0rem;
+    width: 33rem;
+    height: 45rem;
+    padding: 2rem;
+  }
+
+  .container::before {
+    content: '';
+    background-image: url(./images/illustration-woman-online-mobile.svg);
+    z-index: 0;
+    top: -11.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    height: 19.1rem;
+    width: 25.1rem;
+  }
+
+  .illustration {
+    position: relative;
+    display: block;
+    /* overflow: visible; */
+    height: 8rem;
+    width: 100%;
+
+  }
+
+  .illustration img {
+    display: none;
+  }
+
+  .illustration::after {
+    background: none;
+  }
+
+  .questions::before {
+    content: '';
+    position: absolute;
+    background-image: url(/03accordionCard/images/bg-pattern-mobile.svg);
+    background-size: cover;
+    top: -1.5rem;
+    left: 3.8rem;
+    z-index: 1;
+    height: 11rem;
+    width: 25.5rem;
+  }
+
+  .questions {
+    width: 100%;
+    padding: 0.5rem;
+    gap: 2.5rem;
+  }
+
+  .questions__items {
+    padding: 0;
+  }
+
+  .questions__item {
+    font-size: 1.4rem;
+  }
+
+  .questions__heading {
+    text-align: center;
+  }
 }

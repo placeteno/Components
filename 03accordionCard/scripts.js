@@ -6,8 +6,8 @@ questionsItems.forEach(function (question) {
     const questionText = question.querySelector(".questions__text");
     const questionIcon = question.querySelector("ion-icon");
 
-    questionTitle.classList.add("question-open");
-    questionText.classList.add("open");
+    questionTitle.classList.toggle("question-open");
+    questionText.classList.toggle("open");
     questionIcon.style.transform = "rotate(180deg)";
   });
 });
