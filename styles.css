@@ -6,6 +6,7 @@
 
 body {
   height: 100vh;
+
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -14,30 +15,77 @@ h1 {
   font-size: 2.5rem;
 }
 
-nav {
-  padding: 0 2rem;
-}
-
-ol {
-  list-style: none;
-  padding-left: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-a:link,
-a:visited {
-  border-radius: 10px;
-  color: rgb(50, 100, 29);
-  font-size: 1.2rem;
+a {
+  display: inline-block;
+  color: white;
   text-decoration: none;
-  background-color: rgb(115, 232, 121);
-  padding: 1rem 2.5rem;
 }
 
-a:hover,
-a:active {
-  background-color: rgb(107, 217, 112);
+main {
+  padding: 0 5rem;
+  width: 100%;
+}
 
+.logo {
+  padding: 2rem;
+}
+
+.logo img {
+  height: 3rem;
+}
+
+.components {
+  margin-bottom: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+}
+
+.card {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(/img/prod2.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  padding: 2rem;
+  color: white;
+  font-size: 3rem;
+  transition: .2s;
+}
+
+.card:nth-of-type(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(./img/test2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.card:nth-of-type(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(./img/acc2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.card:nth-of-type(4) {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(./img/rating.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.card:nth-of-type(5) {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(./img/tipCalc.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.card:hover .card-title {
+  transform: translateY(-20px);
 }
