@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Insure landing page</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="./main.js" defer></script>
   </head>
   <body>
     <header class="main-header">
@@ -22,18 +20,23 @@
       </a>
       <nav class="header-nav">
         <ul class="nav-items">
-          <li class="nav-item"><a href="#">How we work</a></li>
-          <li class="nav-item"><a href="#">Blog</a></li>
-          <li class="nav-item"><a href="#">Account</a></li>
-          <li class="nav-item"><a href="#">View Plans</a></li>
+          <li><a class="nav-item-link" href="#">How we work</a></li>
+          <li><a class="nav-item-link" href="#">Blog</a></li>
+          <li><a class="nav-item-link" href="#">Account</a></li>
+          <li><a class="nav-item-link-plan" href="#">View Plans</a></li>
         </ul>
+        <img
+          class="patter-mobile-nav"
+          src="./images/bg-pattern-mobile-nav.svg"
+          alt=""
+        />
       </nav>
       <button class="btn-nav" type="button">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
-          class="nav-icon"
+          class="btn-nav-icon"
           name="hamburger-icon"
         >
           <g fill="none" fill-rule="evenodd">
@@ -52,7 +55,7 @@
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
-          class="nav-icon"
+          class="btn-nav-icon displayNone"
           name="close-icon"
         >
           <g fill="none" fill-rule="evenodd">
@@ -139,7 +142,7 @@
             <div class="services-item">
               <img
                 src="./images/icon-affordable-prices.svg"
-                alt="Ligthning icon"
+                alt="Dollar sign icon"
               />
               <h3 class="services-item-title">Affordable Prices</h3>
               <p class="services-item-description">
@@ -148,7 +151,10 @@
               </p>
             </div>
             <div class="services-item">
-              <img src="./images/icon-people-first.svg" alt="Ligthning icon" />
+              <img
+                src="./images/icon-people-first.svg"
+                alt="Person torso icon"
+              />
               <h3 class="services-item-title">People First</h3>
               <p class="services-item-description">
                 Our plans aren’t full of conditions and clauses to prevent
@@ -160,14 +166,38 @@
       </section>
 
       <section class="section-findout">
-        <div class="container-mobile">
-          <h2>Find out more about how we work</h2>
-          <a class="btn" href="#">How we work</a>
+        <div class="findout">
+          <picture>
+            <source
+              srcset="./images/bg-pattern-how-we-work-desktop.svg"
+              media="(min-width: 700px)"
+            />
+            <img
+              class="findout-pattern"
+              src="./images/bg-pattern-how-we-work-mobile.svg"
+              alt=""
+            />
+          </picture>
+          <div class="findout-content">
+            <h2 class="findout-heading">Find out more about how we work</h2>
+            <a class="btn" href="#">How we work</a>
+          </div>
         </div>
       </section>
     </main>
     <footer>
-      <div>
+      <div class="footer-socials">
+        <picture>
+          <source
+            srcset="./images/bg-pattern-footer-desktop.svg"
+            media="(min-width: 700px)"
+          />
+          <img
+            class="footer-pattern"
+            src="./images/bg-pattern-footer-mobile.svg"
+            alt=""
+          />
+        </picture>
         <a href="/">
           <img src="./images/logo.svg" alt="" />
         </a>
@@ -178,35 +208,35 @@
             </a>
           </li>
           <li>
-            <a href="http://wwww.twitter.com" class="social-link">
+            <a href="http://www.twitter.com" class="social-link">
               <img src="./images/icon-twitter.svg" alt="Facebook Icon" />
             </a>
           </li>
           <li>
-            <a href="http://wwww.pinterest.com" class="social-link">
+            <a href="http://www.pinterest.com" class="social-link">
               <img src="./images/icon-pinterest.svg" alt="Facebook Icon" />
             </a>
           </li>
           <li>
-            <a href="http://wwww.instagram.com" class="social-link">
+            <a href="http://www.instagram.com" class="social-link">
               <img src="./images/icon-instagram.svg" alt="Facebook Icon" />
             </a>
           </li>
         </ul>
       </div>
-      <div class="container-mobile grid">
+      <div class="footer-nav container-mobile grid">
         <nav class="nav-col">
           <p class="footer-heading">Our Company</p>
-          <ul class="footer-nav">
+          <u role="list" class="footer-nav-links">
             <li><a href="" class="footer-link">How we work</a></li>
             <li><a href="" class="footer-link">Why insure?</a></li>
             <li><a href="" class="footer-link">Check price</a></li>
             <li><a href="" class="footer-link">Reviews</a></li>
-          </ul>
+          </u>
         </nav>
         <nav class="nav-col">
           <p class="footer-heading">Help Me</p>
-          <ul class="footer-nav">
+          <ul role="list" class="footer-nav-links">
             <li><a href="" class="footer-link">FAQ</a></li>
             <li><a href="" class="footer-link">Terms of Use</a></li>
             <li><a href="" class="footer-link">Privacy Policy</a></li>
@@ -215,7 +245,7 @@
         </nav>
         <nav class="nav-col">
           <p class="footer-heading">Contact</p>
-          <ul class="footer-nav">
+          <ul role="list" class="footer-nav-links">
             <li><a href="" class="footer-link">Sales</a></li>
             <li><a href="" class="footer-link">Support</a></li>
             <li><a href="" class="footer-link">Live Chat</a></li>
@@ -223,7 +253,7 @@
         </nav>
         <nav class="nav-col">
           <p class="footer-heading">Others</p>
-          <ul class="footer-nav">
+          <ul role="list" class="footer-nav-links">
             <li><a href="" class="footer-link">Careers</a></li>
             <li><a href="" class="footer-link">Press</a></li>
             <li><a href="" class="footer-link">Licenses</a></li>
@@ -235,7 +265,10 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">José González</a>.
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/placeteno"
+          >José González</a
+        >.
       </div>
     </footer>
   </body>

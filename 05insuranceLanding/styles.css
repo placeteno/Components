@@ -45,8 +45,8 @@ h3 {
   font-family: var(--ff-heading);
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -62,7 +62,7 @@ a {
 }
 
 section {
-  margin-bottom: 10rem;
+  margin-bottom: 12rem;
 }
 
 .grid {
@@ -93,24 +93,81 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2.2rem;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 100;
   background-color: white;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-nav {
+  position: absolute;
+  background-color: var(--very-dark-violet);
+  top: 7.6rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all .3s ease-in-out;
 }
 
 .nav-items {
+  position: relative;
+  padding: 4rem 2rem 0 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.nav-items li {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-item-link,
+.nav-item-link-plan {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1.5px;
+}
+
+.nav-item-link-plan:link,
+.nav-item-link-plan:visited {
+  display: inline-block;
+  border: 2px solid white;
+  color: white;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.patter-mobile-nav {
+  position: absolute;
+  bottom: 7.5rem;
+  left: 0;
+}
+
+.btn-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.displayNone {
   display: none;
 }
 
-.nav-icon[name="hamburger-icon"] {
+.displayBlock {
   display: block;
-}
-
-.nav-icon[name="close-icon"] {
-  display: none;
 }
 
 /* =======================
@@ -157,14 +214,169 @@ section {
   line-height: 1.8;
 }
 
-.section-findout {
+/* =======================
+      SERVICES SECTION
+   ======================= */
+.section--services {
+  position: relative;
+  color: var(--very-dark-violet);
+}
+
+.section--services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 1px;
+  background-color: hsl(296, 15%, 59%);
+}
+
+
+.section--services__heading {
+  padding: 3rem 0 6rem 0;
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+.services-items-box {
+  grid-template-columns: 1fr;
+  gap: 5rem;
+  text-align: center;
+}
+
+.services-items-box img {
+  margin-bottom: 2rem;
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.services-item-title {
+  font-size: 3rem;
+}
+
+.services-item-description {
+  line-height: 1.5;
+  color: var(--dark-grayish-violet);
+}
+
+
+/* =======================
+      FIND OUT SECTION
+   ======================= */
+
+.findout {
+  position: relative;
+  padding: 7rem 2rem;
+  margin: 0 2.5rem;
   background-color: var(--dark-violet);
+}
+
+.findout-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.findout-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.findout-heading {
+  text-align: center;
+  line-height: 1;
+  font-size: 4rem;
+  color: white;
 }
 
 /* =======================
       FOOTER
    ======================= */
+
+.footer-socials {
+  position: relative;
+  padding: 6rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background: linear-gradient(rgb(244, 244, 244), transparent);
+  z-index: 1;
+}
+
+.footer-pattern {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.footer-socials::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background-color: rgb(210, 210, 210);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-nav {
+  grid-template-columns: repeat(auto-fill, 325px);
+  text-align: center;
+  gap: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+}
+
+.nav-col {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.footer-heading {
+  color: var(--dark-grayish-violet);
+  padding: 3rem 0;
+  font-weight: 700;
+}
+
+
+.footer-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  color: hsl(256, 27%, 31%);
+  font-weight: 700;
+}
+
+
+
 .attribution {
+  padding: 2rem 0;
   font-size: 11px;
   text-align: center;
   font-family: var(--font-body);
