@@ -8,14 +8,14 @@ realistic projects.
 ### Links
 
 - Solution URL:
-  [](https://github.com/placeteno/Components/tree/main/05insuranceLanding)
+  [Solution URL](https://github.com/placeteno/Components/tree/main/05insuranceLanding)
 - Live Site URL:
-  [](https://placeteno.github.io/Components/05insuranceLanding/index.html)
+  [Live Site URL](https://placeteno.github.io/Components/05insuranceLanding/index.html)
 
 ## My process
 
 This was another good project to practice layouts. I learned a couple of new
-things, like the <picture> tag and <srcset> to switch images based on screen
+things, like the < picture > tag and < srcset > to switch images based on screen
 sizes. I started the project with mobile-first and I have to say it felt more
 natural going from mobile to desktop, although that depends on the project. In
 any case, a good project to practice CSS.
