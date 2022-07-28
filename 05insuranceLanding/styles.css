@@ -69,7 +69,7 @@ section {
   display: grid;
 }
 
-.container-mobile {
+.container {
   padding: 0 2.5rem;
 }
 
@@ -88,18 +88,23 @@ section {
       HEADER
    ======================= */
 
-.main-header {
+
+header {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.2rem;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   background-color: white;
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2rem;
+
 }
 
 .header-nav {
@@ -145,10 +150,11 @@ section {
   padding: 1.5rem 0;
 }
 
-.patter-mobile-nav {
+.pattern-mobile-nav {
   position: absolute;
   bottom: 7.5rem;
   left: 0;
+  width: 100%;
 }
 
 .btn-nav {
@@ -194,7 +200,7 @@ section {
 
 .hero-pattern-right {
   position: absolute;
-  bottom: -45rem;
+  bottom: -54rem;
   right: 0;
 }
 
@@ -271,7 +277,7 @@ section {
       FIND OUT SECTION
    ======================= */
 
-.findout {
+.findout-content-box {
   position: relative;
   padding: 7rem 2rem;
   margin: 0 2.5rem;
@@ -304,19 +310,24 @@ section {
 /* =======================
       FOOTER
    ======================= */
+.footer-socials-box {
+  position: relative;
+  background: linear-gradient(rgb(244, 244, 244), transparent);
+  z-index: 1;
+}
+
 
 .footer-socials {
-  position: relative;
   padding: 6rem 0 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  background: linear-gradient(rgb(244, 244, 244), transparent);
-  z-index: 1;
+
 }
 
 .footer-pattern {
+  width: 100%;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -342,7 +353,8 @@ section {
 }
 
 .footer-nav {
-  grid-template-columns: repeat(auto-fill, 325px);
+  grid-template-columns: repeat(auto-fill, 270px);
+  justify-content: center;
   text-align: center;
   gap: 2rem;
   padding-top: 1rem;
@@ -373,8 +385,6 @@ section {
   font-weight: 700;
 }
 
-
-
 .attribution {
   padding: 2rem 0;
   font-size: 11px;
@@ -384,4 +394,295 @@ section {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (min-width: 45em) {
+  .section--hero {
+    position: relative;
+    display: flex;
+  }
+
+  .section--hero__img {
+    display: inline-block;
+    order: 2;
+    align-self: center;
+  }
+
+  .hero-container {
+    width: 50%;
+    align-self: center
+  }
+
+  .hero__content {
+    text-align: left;
+  }
+
+  .hero__heading {
+    font-size: 3.5rem;
+  }
+
+  .hero__description {
+    font-size: 1.4rem;
+  }
+
+  .hero-pattern-right {
+    display: none;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  /* =======================
+      SERVICES SECTION
+   ======================= */
+
+  .section--services::before {
+    width: 15%;
+    left: 3.5%;
+    transform: translateX(0);
+  }
+
+  .section--services__heading {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+
+  .services-items-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+  }
+
+  .services-items-box img {
+    margin-bottom: 1rem;
+    width: 6rem;
+  }
+
+  .services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .services-item-title {
+    font-size: 2.5rem;
+  }
+
+  .services-item-description {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+@media screen and (min-width: 50em) {
+  .container {
+    padding: 0 3.5rem;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+  }
+
+  .main-header {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .header-nav {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: translateX(0);
+    opacity: 1;
+    background: none;
+  }
+
+  .nav-items {
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2.5rem;
+  }
+
+  .nav-items li {
+    text-align: left;
+    width: auto;
+  }
+
+  .nav-item-link,
+  .nav-item-link-plan {
+    font-size: 1.2rem;
+    color: var(--very-dark-violet)
+  }
+
+  .nav-item-link-plan:link,
+  .nav-item-link-plan:visited {
+    display: inline-block;
+    border: 2px solid var(--dark-violet);
+    color: var(--dark-violet);
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .pattern-mobile-nav {
+    display: none;
+  }
+
+  .btn-nav {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 63em) {
+
+  .container {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .main-header {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+  }
+
+  /* =======================
+      HERO SECTION
+   ======================= */
+  .section--hero {
+    padding-top: 7.5rem;
+    background-color: var(--dark-violet);
+    color: white;
+  }
+
+  .section--hero__img img {
+    width: 100%;
+  }
+
+  .section--hero__content-box {
+    padding: 9rem 0;
+    position: relative;
+  }
+
+  .hero-pattern-left {
+    position: absolute;
+  }
+
+  .hero-pattern-right {
+    position: absolute;
+    bottom: -54rem;
+    right: 0;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero__heading {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .hero__description {
+    line-height: 1.8;
+  }
+
+  /* =======================
+      SERVICES SECTION
+   ======================= */
+
+  .section--services::before {
+    width: 10%;
+    left: 11.5%;
+  }
+
+  .section--services__heading {
+    font-size: 6.5rem;
+    text-align: left;
+  }
+
+  .services-items-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    text-align: left;
+
+  }
+
+  .services-items-box img {
+    margin-bottom: 1rem;
+    width: 25%;
+  }
+
+  .services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .services-item-title {
+    font-size: 3rem;
+  }
+
+  .services-item-description {
+    font-size: 1.6rem;
+  }
+
+  /* =======================
+      FIND OUT SECTION
+   ======================= */
+
+  .findout-content-box {
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 7rem 8rem;
+  }
+
+  .findout-pattern {
+    height: 100%;
+  }
+
+  .findout-content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2em;
+  }
+
+  .findout-heading {
+    width: 47%;
+    text-align: left;
+    line-height: 1;
+    font-size: 5rem;
+    color: white;
+  }
+
+  /* =======================
+      FOOTER
+   ======================= */
+  .footer-socials {
+    max-width: 110rem;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-pattern {
+    width: auto;
+  }
+
+  .footer-nav {
+    max-width: 110rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: left;
+  }
 }

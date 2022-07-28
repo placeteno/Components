@@ -14,64 +14,66 @@
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <header class="main-header">
-      <a href="/">
-        <img src="./images/logo.svg" alt="" />
-      </a>
-      <nav class="header-nav">
-        <ul class="nav-items">
-          <li><a class="nav-item-link" href="#">How we work</a></li>
-          <li><a class="nav-item-link" href="#">Blog</a></li>
-          <li><a class="nav-item-link" href="#">Account</a></li>
-          <li><a class="nav-item-link-plan" href="#">View Plans</a></li>
-        </ul>
-        <img
-          class="patter-mobile-nav"
-          src="./images/bg-pattern-mobile-nav.svg"
-          alt=""
-        />
-      </nav>
-      <button class="btn-nav" type="button">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          class="btn-nav-icon"
-          name="hamburger-icon"
-        >
-          <g fill="none" fill-rule="evenodd">
-            <path
-              fill="#FFF"
-              stroke="#2C2830"
-              stroke-width="1.5"
-              d="M.75.75h30.5v30.5H.75z"
-            />
-            <g fill="#2C2830">
-              <path d="M8 10h16v1.5H8zM8 15h16v1.5H8zM8 20h16v1.5H8z" />
+    <header>
+      <div class="main-header">
+        <a href="/">
+          <img src="./images/logo.svg" alt="" />
+        </a>
+        <nav class="header-nav">
+          <ul class="nav-items">
+            <li><a class="nav-item-link" href="#">How we work</a></li>
+            <li><a class="nav-item-link" href="#">Blog</a></li>
+            <li><a class="nav-item-link" href="#">Account</a></li>
+            <li><a class="nav-item-link-plan" href="#">View Plans</a></li>
+          </ul>
+          <img
+            class="pattern-mobile-nav"
+            src="./images/bg-pattern-mobile-nav.svg"
+            alt=""
+          />
+        </nav>
+        <button class="btn-nav" type="button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            class="btn-nav-icon"
+            name="hamburger-icon"
+          >
+            <g fill="none" fill-rule="evenodd">
+              <path
+                fill="#FFF"
+                stroke="#2C2830"
+                stroke-width="1.5"
+                d="M.75.75h30.5v30.5H.75z"
+              />
+              <g fill="#2C2830">
+                <path d="M8 10h16v1.5H8zM8 15h16v1.5H8zM8 20h16v1.5H8z" />
+              </g>
             </g>
-          </g>
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          class="btn-nav-icon displayNone"
-          name="close-icon"
-        >
-          <g fill="none" fill-rule="evenodd">
-            <path
-              fill="#FFF"
-              stroke="#2C2830"
-              stroke-width="1.5"
-              d="M.75.75h30.5v30.5H.75z"
-            />
-            <g fill="#2C2830">
-              <path d="M10.873 9.563l11.314 11.314-1.06 1.06L9.813 10.623z" />
-              <path d="M9.813 20.877L21.127 9.563l1.06 1.06-11.314 11.314z" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            class="btn-nav-icon displayNone"
+            name="close-icon"
+          >
+            <g fill="none" fill-rule="evenodd">
+              <path
+                fill="#FFF"
+                stroke="#2C2830"
+                stroke-width="1.5"
+                d="M.75.75h30.5v30.5H.75z"
+              />
+              <g fill="#2C2830">
+                <path d="M10.873 9.563l11.314 11.314-1.06 1.06L9.813 10.623z" />
+                <path d="M9.813 20.877L21.127 9.563l1.06 1.06-11.314 11.314z" />
+              </g>
             </g>
-          </g>
-        </svg>
-      </button>
+          </svg>
+        </button>
+      </div>
     </header>
     <main>
       <!-- HERO SECTION -->
@@ -83,30 +85,22 @@
           />
           <img src="./images/image-intro-mobile.jpg" alt="Baby Sleeping" />
         </picture>
-        <picture class="section--hero__bg">
+        <picture class="hero-pattern-left">
           <source
             srcset="./images/bg-pattern-intro-left-desktop.svg"
             media="(min-width: 1000px)"
           />
-          <img
-            class="hero-pattern-left"
-            src="./images/bg-pattern-intro-left-mobile.svg"
-            alt=""
-          />
+          <img src="./images/bg-pattern-intro-left-mobile.svg" alt="" />
         </picture>
-        <picture>
+        <picture class="hero-pattern-right">
           <source
             srcset="./images/bg-pattern-intro-right-desktop.svg"
             media="(min-width: 1000px)"
           />
-          <img
-            class="hero-pattern-right"
-            src="./images/bg-pattern-intro-right-mobile.svg"
-            alt=""
-          />
+          <img src="./images/bg-pattern-intro-right-mobile.svg" alt="" />
         </picture>
 
-        <div class="container-mobile">
+        <div class="container hero-container">
           <div class="section--hero__content-box">
             <div class="hero__content">
               <h1 class="hero__heading">Humanizing your insurance.</h1>
@@ -125,7 +119,7 @@
 
       <!-- SERVICES SECTION -->
       <section class="section--services">
-        <div class="container-mobile">
+        <div class="container">
           <h2 class="section--services__heading">We’re different</h2>
           <div class="services-items-box grid">
             <div class="services-item">
@@ -166,7 +160,7 @@
       </section>
 
       <section class="section-findout">
-        <div class="findout">
+        <div class="findout-content-box">
           <picture>
             <source
               srcset="./images/bg-pattern-how-we-work-desktop.svg"
@@ -185,54 +179,53 @@
         </div>
       </section>
     </main>
+
     <footer>
-      <div class="footer-socials">
-        <picture>
-          <source
-            srcset="./images/bg-pattern-footer-desktop.svg"
-            media="(min-width: 700px)"
-          />
-          <img
-            class="footer-pattern"
-            src="./images/bg-pattern-footer-mobile.svg"
-            alt=""
-          />
-        </picture>
-        <a href="/">
-          <img src="./images/logo.svg" alt="" />
-        </a>
-        <ul class="social-links">
-          <li>
-            <a href="http://www.facebook.com" class="social-link">
-              <img src="./images/icon-facebook.svg" alt="Facebook Icon" />
-            </a>
-          </li>
-          <li>
-            <a href="http://www.twitter.com" class="social-link">
-              <img src="./images/icon-twitter.svg" alt="Facebook Icon" />
-            </a>
-          </li>
-          <li>
-            <a href="http://www.pinterest.com" class="social-link">
-              <img src="./images/icon-pinterest.svg" alt="Facebook Icon" />
-            </a>
-          </li>
-          <li>
-            <a href="http://www.instagram.com" class="social-link">
-              <img src="./images/icon-instagram.svg" alt="Facebook Icon" />
-            </a>
-          </li>
-        </ul>
+      <div class="footer-socials-box">
+        <div class="footer-socials">
+          <picture class="footer-pattern">
+            <source
+              srcset="./images/bg-pattern-footer-desktop.svg"
+              media="(min-width: 700px)"
+            />
+            <img src="./images/bg-pattern-footer-mobile.svg" alt="" />
+          </picture>
+          <a href="#">
+            <img src="./images/logo.svg" alt="" />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="http://www.facebook.com" class="social-link">
+                <img src="./images/icon-facebook.svg" alt="Facebook Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="http://www.twitter.com" class="social-link">
+                <img src="./images/icon-twitter.svg" alt="Facebook Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="http://www.pinterest.com" class="social-link">
+                <img src="./images/icon-pinterest.svg" alt="Facebook Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="http://www.instagram.com" class="social-link">
+                <img src="./images/icon-instagram.svg" alt="Facebook Icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="footer-nav container-mobile grid">
         <nav class="nav-col">
           <p class="footer-heading">Our Company</p>
-          <u role="list" class="footer-nav-links">
+          <ul role="list" class="footer-nav-links">
             <li><a href="" class="footer-link">How we work</a></li>
             <li><a href="" class="footer-link">Why insure?</a></li>
-            <li><a href="" class="footer-link">Check price</a></li>
+            <li><a href="" class="footer-link">View Plans</a></li>
             <li><a href="" class="footer-link">Reviews</a></li>
-          </u>
+          </ul>
         </nav>
         <nav class="nav-col">
           <p class="footer-heading">Help Me</p>
