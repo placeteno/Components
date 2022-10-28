@@ -1,0 +1,177 @@
+$main-font: "Montserrat", sans-serif;
+
+$gradient: hsl(236, 72%, 79%), hsl(237, 63%, 64%);
+
+$color-gray-100: hsl(240, 78%, 98%);
+$color-gray-200: hsl(234, 14%, 74%);
+$color-gray-400: hsl(233, 13%, 49%);
+$color-gray-600: hsl(232, 13%, 33%);
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+
+  font-family: $main-font;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  background: $color-gray-100;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 2rem;
+}
+
+/**************
+    HEADER
+****************/
+
+.header {
+  margin-bottom: 10rem;
+  text-align: center;
+  .heading__primary {
+    color: $color-gray-400;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+  }
+  &--slider {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .slider-left-side,
+  .slider-right-side {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-gray-200;
+  }
+
+  .slider-container {
+    background: linear-gradient($gradient);
+    height: 2rem;
+    width: 4rem;
+    padding: 0.3rem;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    .slider-circle {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 1rem;
+      background-color: $color-gray-100;
+      transition: all 0.2s;
+    }
+    .right {
+      transform: translateX(100%);
+    }
+  }
+}
+
+/**************
+    CARDS
+****************/
+
+.plans__box {
+  border-radius: 1rem;
+  box-shadow: 0 0 30px hsla(236, 72%, 79%, 0.199);
+  overflow: hidden;
+
+  .plans--cards {
+    display: flex;
+
+    .plan--card {
+      background: white;
+      padding: 2.5rem;
+      text-align: center;
+      font-weight: 700;
+
+      .plan--header {
+        .plan--type {
+          font-size: 1.3rem;
+          color: $color-gray-400;
+        }
+        .plan--price__box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          color: $color-gray-600;
+        }
+        .dollar-sign {
+          font-size: 3.5rem;
+        }
+        .plan--price {
+          font-size: 6rem;
+        }
+      }
+
+      .plan__features {
+        margin: 2.5rem 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        color: hsl(233, 13%, 49%);
+
+        .plan--feature {
+          border-top: 1px solid hsla(234, 14%, 74%, 0.35);
+          padding: 1.5rem 7rem;
+          font-weight: 600;
+
+          &:nth-child(3) {
+            border-bottom: 1px solid hsla(234, 14%, 74%, 0.35);
+          }
+        }
+      }
+    }
+    .plan--card:nth-child(2) {
+      background: linear-gradient(130deg, $gradient);
+    }
+
+    .btn {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: white;
+      background: linear-gradient(90deg, $gradient);
+      padding: 1rem 0;
+      border: 1px solid rgba(255, 255, 255, 0);
+      border-radius: 0.5rem;
+      // check
+      &:hover {
+        border: 1px solid hsla(234, 14%, 74%, 0.35);
+        background: white;
+        color: hsl(237, 63%, 64%);
+      }
+    }
+  }
+}
+
+/**************
+    FOOTER
+****************/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
