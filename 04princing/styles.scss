@@ -190,7 +190,8 @@ ul {
       border-radius: 0 1rem 1rem 0;
     }
 
-    .btn {
+    .btn:link,
+    .btn:visited {
       display: block;
       font-size: 1.1rem;
       font-weight: 600;
@@ -202,8 +203,10 @@ ul {
       padding: 1rem 0;
       border: 1px solid white;
       border-radius: 0.5rem;
+
       // check
-      &:hover {
+      &:hover,
+      &:active {
         border: 1px solid hsl(234, 14%, 74%);
         background: white;
         color: hsl(237, 63%, 64%);
