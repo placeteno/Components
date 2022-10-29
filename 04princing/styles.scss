@@ -37,6 +37,23 @@ ul {
   padding: 2rem;
 }
 
+.bg-top,
+.bg-bottom {
+  position: fixed;
+}
+
+.bg-top {
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-bottom {
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /**************
     HEADER
 ****************/
@@ -44,6 +61,7 @@ ul {
 .header {
   margin-bottom: 10rem;
   text-align: center;
+
   .heading__primary {
     color: $color-gray-400;
     font-size: 2.5rem;
@@ -88,18 +106,18 @@ ul {
 ****************/
 
 .plans__box {
-  border-radius: 1rem;
-  box-shadow: 0 0 30px hsla(236, 72%, 79%, 0.199);
   overflow: hidden;
 
   .plans--cards {
     display: flex;
+    align-items: center;
 
     .plan--card {
       background: white;
       padding: 2.5rem;
       text-align: center;
       font-weight: 700;
+      box-shadow: 0 0 30px hsla(236, 72%, 79%, 0.199);
 
       .plan--header {
         .plan--type {
@@ -130,7 +148,7 @@ ul {
 
         .plan--feature {
           border-top: 1px solid hsla(234, 14%, 74%, 0.35);
-          padding: 1.5rem 7rem;
+          padding: 1.5rem 8rem;
           font-weight: 600;
 
           &:nth-child(3) {
@@ -139,8 +157,37 @@ ul {
         }
       }
     }
+
+    .plan--card:nth-child(1) {
+      border-radius: 1rem 0 0 1rem;
+    }
     .plan--card:nth-child(2) {
       background: linear-gradient(130deg, $gradient);
+      padding: 5rem 2.5rem;
+      border-radius: 1rem;
+
+      .plan--type,
+      .plan--price__box {
+        color: white;
+      }
+
+      .plan__features {
+        color: white;
+      }
+
+      .btn {
+        background: white;
+        color: hsl(237, 63%, 64%);
+
+        &:hover {
+          background: transparent;
+          color: white;
+          border: 1px solid hsl(0, 0%, 100%);
+        }
+      }
+    }
+    .plan--card:nth-child(3) {
+      border-radius: 0 1rem 1rem 0;
     }
 
     .btn {
@@ -153,11 +200,11 @@ ul {
       color: white;
       background: linear-gradient(90deg, $gradient);
       padding: 1rem 0;
-      border: 1px solid rgba(255, 255, 255, 0);
+      border: 1px solid white;
       border-radius: 0.5rem;
       // check
       &:hover {
-        border: 1px solid hsla(234, 14%, 74%, 0.35);
+        border: 1px solid hsl(234, 14%, 74%);
         background: white;
         color: hsl(237, 63%, 64%);
       }
@@ -169,9 +216,37 @@ ul {
     FOOTER
 ****************/
 .attribution {
+  padding: 2rem 0;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 895px) {
+  body {
+    display: block;
+  }
+
+  .bg-top {
+    top: -5rem;
+    right: -20rem;
+  }
+
+  .bg-bottom {
+    display: none;
+  }
+
+  .plans__box {
+    .plans--cards {
+      flex-direction: column;
+      gap: 2rem;
+
+      .plan--card:nth-child(1),
+      .plan--card:nth-child(3) {
+        border-radius: 1rem;
+      }
+    }
+  }
 }

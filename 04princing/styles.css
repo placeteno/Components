@@ -27,6 +27,23 @@ ul {
   padding: 2rem;
 }
 
+.bg-top,
+.bg-bottom {
+  position: fixed;
+}
+
+.bg-top {
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-bottom {
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /**************
     HEADER
 ****************/
@@ -74,18 +91,18 @@ ul {
     CARDS
 ****************/
 .plans__box {
-  border-radius: 1rem;
-  box-shadow: 0 0 30px hsla(236deg, 72%, 79%, 0.199);
   overflow: hidden;
 }
 .plans__box .plans--cards {
   display: flex;
+  align-items: center;
 }
 .plans__box .plans--cards .plan--card {
   background: white;
   padding: 2.5rem;
   text-align: center;
   font-weight: 700;
+  box-shadow: 0 0 30px hsla(236deg, 72%, 79%, 0.199);
 }
 .plans__box .plans--cards .plan--card .plan--header .plan--type {
   font-size: 1.3rem;
@@ -113,14 +130,38 @@ ul {
 }
 .plans__box .plans--cards .plan--card .plan__features .plan--feature {
   border-top: 1px solid hsla(234deg, 14%, 74%, 0.35);
-  padding: 1.5rem 7rem;
+  padding: 1.5rem 8rem;
   font-weight: 600;
 }
 .plans__box .plans--cards .plan--card .plan__features .plan--feature:nth-child(3) {
   border-bottom: 1px solid hsla(234deg, 14%, 74%, 0.35);
 }
+.plans__box .plans--cards .plan--card:nth-child(1) {
+  border-radius: 1rem 0 0 1rem;
+}
 .plans__box .plans--cards .plan--card:nth-child(2) {
   background: linear-gradient(130deg, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  padding: 5rem 2.5rem;
+  border-radius: 1rem;
+}
+.plans__box .plans--cards .plan--card:nth-child(2) .plan--type,
+.plans__box .plans--cards .plan--card:nth-child(2) .plan--price__box {
+  color: white;
+}
+.plans__box .plans--cards .plan--card:nth-child(2) .plan__features {
+  color: white;
+}
+.plans__box .plans--cards .plan--card:nth-child(2) .btn {
+  background: white;
+  color: hsl(237deg, 63%, 64%);
+}
+.plans__box .plans--cards .plan--card:nth-child(2) .btn:hover {
+  background: transparent;
+  color: white;
+  border: 1px solid hsl(0deg, 0%, 100%);
+}
+.plans__box .plans--cards .plan--card:nth-child(3) {
+  border-radius: 0 1rem 1rem 0;
 }
 .plans__box .plans--cards .btn {
   display: block;
@@ -132,11 +173,11 @@ ul {
   color: white;
   background: linear-gradient(90deg, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
   padding: 1rem 0;
-  border: 1px solid rgba(255, 255, 255, 0);
+  border: 1px solid white;
   border-radius: 0.5rem;
 }
 .plans__box .plans--cards .btn:hover {
-  border: 1px solid hsla(234deg, 14%, 74%, 0.35);
+  border: 1px solid hsl(234deg, 14%, 74%);
   background: white;
   color: hsl(237deg, 63%, 64%);
 }
@@ -145,10 +186,32 @@ ul {
     FOOTER
 ****************/
 .attribution {
+  padding: 2rem 0;
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
   color: hsl(228deg, 45%, 44%);
+}
+
+@media screen and (max-width: 895px) {
+  body {
+    display: block;
+  }
+  .bg-top {
+    top: -5rem;
+    right: -20rem;
+  }
+  .bg-bottom {
+    display: none;
+  }
+  .plans__box .plans--cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .plans__box .plans--cards .plan--card:nth-child(1),
+.plans__box .plans--cards .plan--card:nth-child(3) {
+    border-radius: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
