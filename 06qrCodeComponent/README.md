@@ -22,7 +22,7 @@ This is a solution to the
 ### What I learned
 
 I did'nt learn new things with this challenge, but it was a fun little project
-to check how fast I could code this component. It took me less than 10 mins!
+to check how fast I could code this component. It took me less than 20 mins!
 
 ## Author
 
