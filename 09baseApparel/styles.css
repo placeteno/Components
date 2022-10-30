@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --color-primary: hsl(0, 36%, 70%);
+  --color-primary-saturated: hsl(0, 93%, 68%);
+  --color-dark-gray: hsl(0, 6%, 24%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  height: 100vh;
+  background: linear-gradient(135deg, hsla(0, 0%, 100%, 0.157), hsl(0, 100%, 98%)), url(./images/bg-pattern-desktop.svg) bottom;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+.hero--logo-box {
+  max-width: 144rem;
+  position: absolute;
+  top: 5rem;
+  left: 16rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.hero--content {
+  grid-column: 1 / 4;
+  width: 45rem;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero--content-box {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 45rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero--title {
+  font-size: 5rem;
+  line-height: 1.1;
+  letter-spacing: 1.5rem;
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+}
+
+.hero--title-first {
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+.hero--description {
+  line-height: 1.6;
+  color: var(--color-primary);
+}
+
+.hero--form {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.form-label {
+  position: absolute;
+  top: 1.7rem;
+  left: 3rem;
+  transition: all .3s;
+  color: hsla(0, 36%, 70%, 0.5);
+}
+
+.form-input {
+  display: block;
+  width: 85%;
+  padding: 1.6rem 3rem;
+  background: transparent;
+  border: 1px solid hsla(0, 36%, 70%, 0.5);
+  border-radius: 10rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  outline: hsl(0, 36%, 70%);
+}
+
+.form-input::placeholder {
+  color: transparent;
+}
+
+.form-input:invalid {
+  border: 1px solid red;
+}
+
+.form-input:focus+.form-label,
+.form-input:not(:placeholder-shown)+.form-label {
+  font-size: 0.9rem;
+  top: 0.6rem
+}
+
+.submit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.5rem 4rem;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0 8px 15px hsl(0, 80%, 86%);
+  transition: all .2s;
+}
+
+.submit-btn:active {
+  box-shadow: 0 8px 8px hsl(0, 80%, 86%);
+
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(135deg, hsl(0, 100%, 98%), hsl(0, 80%, 86%));
+}
+
+.errorMessage {
+  display: none;
+  font-size: 1.4rem;
+  color: var(--color-primary-saturated);
+  position: absolute;
+  bottom: -2.5rem;
+  left: 4rem;
+}
+
+img[alt='errorIcon'] {
+  display: none;
+  position: absolute;
+  right: 10rem;
+  top: 1.3rem;
+}
+
+
+
+.hero--img-box {
+  grid-column: 4 / -1;
+}
+
+/* .hero--img-box img {
+  width: 100%;
+} */
+
+
+.attribution {
+  padding: 2rem 0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(0, 74%, 74%);
+}

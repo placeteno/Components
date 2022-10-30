@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Base Apparel coming soon page | Frontend Mentor</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./mediaq.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header class="hero--logo-box">
+          <img src="./images/logo.svg" alt="Logo" />
+        </header>
+        <section class="hero">
+          <div class="hero--content">
+            <div class="hero--content-box">
+              <h1 class="hero--title">
+                <span class="hero--title-first">We're</span><br />coming<br />
+                soon
+              </h1>
+              <p class="hero--description">
+                Hello fellow shoppers! We're currently building our new fashion
+                store. Add your email below to stay up-to-date with
+                announcements and our launch deals.
+              </p>
+              <form class="hero--form">
+                <input
+                  class="form-input"
+                  type="email"
+                  name="userEmail"
+                  id="userEmail"
+                  placeholder="Email Address"
+                />
+                <label class="form-label" for="userEmail">Email Address</label>
+                <p class="errorMessage"></p>
+                <img src="./images/icon-error.svg" alt="errorIcon" />
+                <button
+                  class="submit-btn"
+                  type="button"
+                  aria-label="Submit form"
+                >
+                  <img
+                    src="./images/icon-arrow.svg"
+                    alt="Submit"
+                    aria-hidden="true"
+                  />
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="hero--img-box">
+            <img
+              srcset="
+                ./images/hero-desktop.jpg 610w,
+                ./images/hero-mobile.jpg  375w
+              "
+              sizes="(max-width: 840px) 375px, 610px"
+              src="./images/hero-desktop.jpg"
+              alt="Woman looking at the camera"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://dev-jose.com">José González</a>.
+      </p>
+    </footer>
+  </body>
+</html>

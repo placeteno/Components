@@ -1,0 +1,55 @@
+@media screen and (max-width: 840px) {
+
+  .hero--logo-box {
+    left: 5rem
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero--content {
+    width: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    grid-column: 1;
+  }
+
+  .hero--content-box {
+    padding-top: 5rem;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    text-align: center;
+  }
+
+  .hero--title {
+    font-size: 3.5rem;
+  }
+
+
+  .hero--description {
+    font-weight: 300;
+    color: var(--color-primary);
+  }
+
+  .hero--img-box {
+    grid-row: 1;
+    grid-column: 1;
+    place-self: center;
+  }
+
+  .form-input {
+    display: block;
+    width: 80%;
+  }
+
+  .submit-btn {
+    padding: 1.5rem 3rem;
+  }
+
+}
