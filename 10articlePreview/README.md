@@ -19,10 +19,11 @@ realistic projects.
 
 ### What I learned
 
-This challenge was a good Flexbox practice. After completing several of these
-projects, I'm improving my decision making in terms of layouts and what the best
-approach so the final product looks closer to the original design, even withouth
-using the Figma files.
+This project was a lot of fun and, like in every other challenge, it pushes you
+to think about where and how to place your content in the component so that it
+looks good in both mobile and desktop views. I think there are things that can
+be improved and it would be even possible to code this challenge without using
+JavaScript, but that could be a next step in the future.
 
 ## Author
 
