@@ -192,3 +192,58 @@ a {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .component {
+    flex-direction: column;
+  }
+
+
+  .component__img {
+    height: 20rem;
+  }
+
+  .component__content {
+    padding: 2rem 4rem;
+  }
+
+  .content--title {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding: 0;
+
+  }
+
+  .content--description {
+    font-size: 1.29rem;
+    padding: 0;
+  }
+
+  .component--footer {
+    margin-top: 2rem;
+  }
+
+  .share-icon {
+    position: relative;
+    top: 10px;
+    z-index: 1;
+  }
+
+  .component--socials {
+    position: relative;
+    bottom: 6.1rem;
+    right: 0rem;
+    gap: 1.5rem;
+    padding: 2rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .component--socials::after {
+    display: none;
+  }
+
+}
