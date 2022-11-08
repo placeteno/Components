@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Advice generator app | Frontend Mentor</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="card">
+          <span class="card__title">
+            Advice #<span class="advice-number">109</span>
+          </span>
+          <p class="card__advice">
+            "<span class="advice-text"
+              >To cleanly remove the seed from an Avocado, lay a knife firmly
+              across it, and twist.</span
+            >"
+          </p>
+          <div class="card__decoration">
+            <picture>
+              <source
+                media="(max-width: 450px)"
+                srcset="
+                  ./images/pattern-divider-desktop.svg 1440w,
+                  ./images/pattern-divider-mobile.svg   500w
+                "
+              />
+              <img src="./images/pattern-divider-desktop.svg" alt="" />
+            </picture>
+          </div>
+        </div>
+        <button class="dice">
+          <img src="./images/icon-dice.svg" alt="Dice" />
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://dev-jose.com">José González</a>.
+      </div>
+    </footer>
+  </body>
+</html>
