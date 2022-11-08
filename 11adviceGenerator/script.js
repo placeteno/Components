@@ -6,17 +6,11 @@ const getNewAdice = async function () {
   try {
     const data = await fetch("https://api.adviceslip.com/advice");
     const { slip } = await data.json();
-    console.log(slip);
     adviceNumber.textContent = slip.id;
     adviceText.textContent = slip.advice;
   } catch (err) {
-    console.log(err);
+    alert("ERROR 💥 Could not reach the server.");
   }
 };
-
-// fetch("https://api.adviceslip.com/advice")
-//   .then((res) => res.json())
-//   .then((data) => console.log(data))
-//   .catch((err) => console.log(err));
 
 dice.addEventListener("click", getNewAdice);

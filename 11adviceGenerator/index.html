@@ -28,7 +28,7 @@
             >"
           </p>
           <div class="card__decoration">
-            <picture>
+            <picture aria-hidden="true">
               <source
                 media="(max-width: 450px)"
                 srcset="
@@ -36,12 +36,20 @@
                   ./images/pattern-divider-mobile.svg   500w
                 "
               />
-              <img src="./images/pattern-divider-desktop.svg" alt="" />
+              <img
+                src="./images/pattern-divider-desktop.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </picture>
           </div>
         </div>
-        <button class="dice">
-          <img src="./images/icon-dice.svg" alt="Dice" />
+        <button class="dice" aria-label="Generate new advice">
+          <img
+            src="./images/icon-dice.svg"
+            alt="Generate new advice"
+            aria-hidden="true"
+          />
         </button>
       </div>
     </main>
