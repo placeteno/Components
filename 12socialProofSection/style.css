@@ -1,0 +1,35 @@
+/* .container {}
+
+.hero {}
+
+.hero__top {}
+
+.hero__upper--title-box {}
+
+.hero--title {}
+
+.hero--description {}
+
+.hero__bottom {}
+
+.hero__ratings {}
+
+.rating {}
+
+.rating--stars {}
+
+.star-svg {}
+
+.rating--description {} */
+
+/******** 
+  FOOTER 
+ ********/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
